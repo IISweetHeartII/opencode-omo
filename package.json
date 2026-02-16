@@ -1,0 +1,61 @@
+{
+  "name": "opencode-omo",
+  "version": "0.2.0",
+  "description": "Turn coding requests into completed work in OpenCode using Sisyphus-first workflows with Prometheus planning and Atlas execution.",
+  "homepage": "https://github.com/IISweetHeartII/opencode-omo",
+  "repository": "https://github.com/IISweetHeartII/opencode-omo",
+  "license": "MIT",
+  "author": "IISweetHeartII (Deokhwan Kim)",
+  "keywords": [
+    "opencode",
+    "oh-my-opencode",
+    "sisyphus",
+    "prometheus",
+    "atlas",
+    "workflow",
+    "openclaw",
+    "agent"
+  ],
+  "metadata": {
+    "openclaw": {
+      "emoji": "🧱",
+      "category": "devtools",
+      "requires": {
+        "bins": [
+          "opencode",
+          "git",
+          "clawhub"
+        ]
+      },
+      "tags": [
+        "opencode",
+        "oh-my-opencode",
+        "sisyphus",
+        "coding",
+        "workflow"
+      ]
+    }
+  },
+  "quickstart": {
+    "install": "clawhub install IISweetHeartII/opencode-omo --workdir ~/.openclaw/workspace --dir skills",
+    "verify_plugin": "cat ~/.config/opencode/opencode.json | grep \"oh-my-opencode\"",
+    "first_run": "opencode run --agent sisyphus \"ulw implement auth middleware and tests\"",
+    "interactive": "opencode --agent sisyphus"
+  },
+  "security": {
+    "notes": [
+      "Use official Oh-My-OpenCode releases from GitHub",
+      "Do not commit secrets or tokens in skill files"
+    ]
+  },
+  "related_skills": {
+    "agent-selfie": {
+      "description": "Generate visual assets for agent identities",
+      "complement": "Pair with disciplined coding workflows"
+    },
+    "gemini-image-gen": {
+      "description": "Image generation and editing via Gemini",
+      "complement": "Use the same workflow discipline for creative automations"
+    }
+  }
+}

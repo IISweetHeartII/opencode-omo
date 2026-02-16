@@ -1,36 +1,65 @@
-# openclaw-skills
+# OpenCode + Oh-My-OpenCode Workflow (opencode-omo)
 
-Monorepo for my OpenClaw/ClawHub skills.
+Turn coding requests into completed work with a Sisyphus-first workflow on top of OpenCode.
 
-## Layout
+[![ClawHub](https://img.shields.io/badge/ClawHub-opencode--omo-blue)](https://clawhub.ai/skills)
+[![MIT License](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 
-- `skills/<slug>/` - One folder per skill (publish unit)
-  - `SKILL.md` is required
-  - optional: `README.md`, `references/`, `assets/`, etc.
+## What this skill is for
+
+- **One-shot coding flow**: use `ulw` for deterministic implementation runs.
+- **Plan then execute**: use Prometheus (`@plan`) and Atlas (`/start-work`) for larger tasks.
+- **Quality consistency**: use repeatable defaults for coding behavior across projects.
+
+## Quick Start
+
+```bash
+# Install from ClawHub into your OpenClaw workspace
+clawhub install IISweetHeartII/opencode-omo --workdir ~/.openclaw/workspace --dir skills
+
+# Run one-shot coding with Sisyphus
+opencode run --agent sisyphus "ulw implement JWT auth with tests"
+```
+
+## Requirements
+
+- `opencode`
+- `git`
+- `clawhub`
+
+## Verify Plugin Setup
+
+```bash
+cat ~/.config/opencode/opencode.json | grep "oh-my-opencode"
+```
+
+If the command returns output, Oh-My-OpenCode plugin is installed.
 
 ## Publish
 
-All publishing uses the ClawHub CLI.
-
-Examples:
-
 ```bash
-# Publish a skill folder (sets slug + version explicitly)
-clawhub publish skills/opencode-omo --slug opencode-omo --version 0.1.0 --tags latest
+# Publish this skill
+clawhub publish skills/opencode-omo --slug opencode-omo --version 0.2.0 --tags latest
 
-# Inspect what is published
+# Inspect registry metadata
 clawhub inspect opencode-omo
 ```
 
-## Install into OpenClaw workspace
+## Skill Files
 
-If you want to install a published skill into your OpenClaw workspace:
+| File | Description |
+|------|-------------|
+| [skills/opencode-omo/SKILL.md](./skills/opencode-omo/SKILL.md) | Published skill entry used by ClawHub |
+| [HEARTBEAT.md](./HEARTBEAT.md) | Periodic workflow checklist for continuous operation |
+| [INSTALL.md](./INSTALL.md) | Step-by-step install and verification guide |
+| [package.json](./package.json) | Skill metadata used for publish/discovery |
 
-```bash
-clawhub install IISweetHeartII/opencode-omo --workdir ~/.openclaw/workspace --dir skills
-```
+## Security Notes
 
-Notes:
+- Keep credentials out of this repository.
+- Use environment variables or local credential stores.
+- Use official Oh-My-OpenCode source and releases for plugin installation.
 
-- This repo is intentionally separate from `~/.openclaw/workspace/skills/` (local-only skills).
-- Keep secrets out of skills. Use env vars or local credential files.
+## License
+
+[MIT](LICENSE)
