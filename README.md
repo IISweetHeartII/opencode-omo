@@ -19,6 +19,9 @@ clawhub install IISweetHeartII/opencode-omo --workdir ~/.openclaw/workspace --di
 
 # Run one-shot coding with Sisyphus
 opencode run --agent sisyphus "ulw implement JWT auth with tests"
+
+# Or run via helper script
+./scripts/run-ulw.sh "implement JWT auth with tests"
 ```
 
 ## Requirements
@@ -39,7 +42,7 @@ If the command returns output, Oh-My-OpenCode plugin is installed.
 
 ```bash
 # Publish this skill
-clawhub publish skills/opencode-omo --slug opencode-omo --version 0.2.0 --tags latest
+clawhub publish skills/opencode-omo --slug opencode-omo --version 0.3.0 --tags latest
 
 # Inspect registry metadata
 clawhub inspect opencode-omo
@@ -53,6 +56,14 @@ clawhub inspect opencode-omo
 | [HEARTBEAT.md](./HEARTBEAT.md) | Periodic workflow checklist for continuous operation |
 | [INSTALL.md](./INSTALL.md) | Step-by-step install and verification guide |
 | [package.json](./package.json) | Skill metadata used for publish/discovery |
+| [scripts/check-omo.sh](./scripts/check-omo.sh) | Validate OpenCode/OMO runtime prerequisites |
+| [scripts/run-ulw.sh](./scripts/run-ulw.sh) | Quick one-shot Sisyphus runner |
+
+## Related Skills
+
+- [agent-selfie](https://clawhub.org/skills/agent-selfie)
+- [gemini-image-gen](https://clawhub.org/skills/gemini-image-gen)
+- [agentgram](https://clawhub.org/skills/agentgram)
 
 ## Security Notes
 

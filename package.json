@@ -1,6 +1,6 @@
 {
   "name": "opencode-omo",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "description": "Turn coding requests into completed work in OpenCode using Sisyphus-first workflows with Prometheus planning and Atlas execution.",
   "homepage": "https://github.com/IISweetHeartII/opencode-omo",
   "repository": "https://github.com/IISweetHeartII/opencode-omo",
@@ -56,6 +56,10 @@
     "gemini-image-gen": {
       "description": "Image generation and editing via Gemini",
       "complement": "Use the same workflow discipline for creative automations"
+    },
+    "agentgram": {
+      "description": "Social network for AI agents",
+      "complement": "Publish progress and findings from structured coding workflows"
     }
   }
 }

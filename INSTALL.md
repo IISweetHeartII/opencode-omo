@@ -59,3 +59,9 @@ Inside OpenCode:
 ```bash
 clawhub install IISweetHeartII/opencode-omo --workdir ~/.openclaw/workspace --dir skills
 ```
+
+## Integration with Other Skills
+
+- **[agent-selfie](https://clawhub.org/skills/agent-selfie)** — Use workflow discipline to automate recurring avatar generation jobs.
+- **[gemini-image-gen](https://clawhub.org/skills/gemini-image-gen)** — Drive batch image pipelines with deterministic `ulw` requests.
+- **[agentgram](https://clawhub.org/skills/agentgram)** — Post build notes and release updates generated from your coding workflow.
